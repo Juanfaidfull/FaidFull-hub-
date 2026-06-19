@@ -1,149 +1,41 @@
-loadstring(game:HttpGet(("https://raw.githubusercontent.com/REDzHUB/LibraryV2/main/redzLib")))()
-MakeWindow({
-  Hub = {
-    Title = "FaidiFull-hub🧊",
-    Animation = "by : JuanDrako🧊"
-  },
-  Key = {
-    KeySystem = false,
-    Title = "Key System",
-    Description = "",
-    KeyLink = "",
-    Keys = {"1234"},
-    Notifi = {
-      Notifications = true,
-      CorrectKey = "Running the Script...",
-      Incorrectkey = "The key is incorrect",
-      CopyKeyLink = "Copied to Clipboard"
-    }
-  }
-})
+# JuanProjects
 
---[[
-  Hub = {
-    Title = "FaidiFull-hub🧊" -- <string> Titulo do seu script
-    Animation = "by : JuanDrako🧊" -- <string> Adiciona um texto na animacão do seu HUB
-  },
-  Key = {
-    KeySystem = <bollean> Adiciona um sistema de chaves
-    Title = "Key System" <string> Adiciona um titulo ao seu sistema de chaves
-    Description = "" <string> Adiciona uma descrição ao seu sistema de chaves
-    KeyLink = "" <string> Adicina o Link onde pega a chave do HUB
-    Keys = {"1234"} <table> Adiciona as Chaves
-    Notifi = {
-      Notifications = true <boolean> Adicina notificações ao sistema de chaves
-      CorrectKey = "Running the Script..." <string> notificação quando a chave estiver correta
-      Incorrectkey = "The key is incorrect" <string> notificação quando a chave estiver incorreta
-      CopyKeyLink = "Copied to Clipboard" <string> notificação quando o link da chave fir copiado
-    }
-  }
-]]
+Biblioteca web para compartir **juegos modificados** y **proyectos optimizados**
+mediante enlaces de descarga (MediaFire, Mega, Drive, GitHub…).
 
-MinimizeButton({
-  Image = "https://create.roblox.com/dashboard/creations/store/130419649627610/configure",
-  Size = {40, 40},
-  Color = Color3.fromRGB(10, 10, 10),
-  Corner = true,
-  Stroke = false,
-  StrokeColor = Color3.fromRGB(255, 0, 0)
-})
---[[
-  Image = "https://create.roblox.com/dashboard/creations/store/130419649627610/configure" <string> imagem do botão
-  Size = {40, 40} <table> tamanho do botão
-  Color = Color3.fromRGB(10, 10, 10) <Color3>  Cor do fundo do botäo
-  Corner = true -- <boolean> Adicina um UICorner
-  Stroke = false <boolean> Adiciona um UIStroke
-  StrokeColor = Color3.fromRGB(255, 0, 0) <Color3> Cor do UIStroke
-]]
-local Main = MakeTab({Name = "Main"})
+Réplica mejorada de la página original de JuanProjects: mismo estilo oscuro con
+acentos rojos y glow, buscador en vivo, pestañas Juegos/Proyectos, tarjetas con
+botón de descarga, y un panel para **subir contenido** con uno o varios espejos.
 
---[[
-  Name = "Main" <string> Nome da guia
-]]
-MakeNotifi({
-  Title = "FaidFull-hub🧊",
-  Text = "Notificação teste",
-  Time = 5
-})
+## Stack
 
---[[
-  Title = "FaidFull-hub🧊" <string> titulo da notificação
-  Text = "Notificação teste" <string> descrição da notificação
-  Time = 5 <number> tempo da notificação
-]]
-local section = AddSection(Main, {"Teste"})
---[[
-  {"Teste"} <table> nome da janela
-]]
-SetSection(section, "𝑩𝑳𝑶𝑿𝑭𝑹𝑼𝑰𝑺_𝑺𝑪𝑹𝑰𝑷𝑺🧊")
+- [Vite](https://vite.dev/) + [React 19](https://react.dev/) + TypeScript
+- [Tailwind CSS](https://tailwindcss.com/)
+- Persistencia en `localStorage` (sin backend) — el contenido subido se guarda
+  en el navegador del usuario.
 
-AddButton(Main, {
-  Name = "REDZHUB",
-  Callback = function()
-    
-  end
-})
+## Desarrollo
 
---[[
-  Name = "REDZHUB" <string> nome do seu botão
-  Callback = 
-function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
-  end
-]]
-AddButton(Main, {
-  Name = "XERO-HUB",
-  Callback = function()
-    
-  end
-})
+```bash
+pnpm install
+pnpm dev        # servidor de desarrollo en http://localhost:5173
+pnpm build      # build de producción en dist/
+pnpm preview    # previsualizar el build
+pnpm lint       # ESLint
+```
 
---[[
-  Name = "XERO-HUB" <string> nome do seu botão
-  Callback = 
-function()
-loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-XeroHub-15621"))()
-  end
-]]
-AddButton(Main, {
-  Name = "SPEED-HUB",
-  Callback = function()
-    
-  end
-})
+## Características
 
---[[
-  Name = "speed-hub" <string> nome do seu botão
-  Callback = 
-function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
-  end
-]]
-AddButton(Main, {
-  Name = "WAZURE-HUB",
-  Callback = function()
-    
-  end
-})
-AddButton(Main, {
-  Name = "WAZURE-HUB",
-  Callback = 
-function()
-loadstring(game:HttpGet("https://rawscripts.net/raw/Blox-Fruits-W-Azure-12565"))()
-    
-  end
-})
-AddButton(Main, {
-  Name = "Botão teste",
-  Callback = function()
-    
-  end
-})
+- 🔎 Búsqueda en vivo por título, descripción y etiquetas.
+- 🎮 Pestañas **Juegos** / **Proyectos** con contadores.
+- ↕️ Orden por recientes, más descargados, destacados o A–Z.
+- ⬆️ Subir / editar / eliminar publicaciones con validación de enlaces.
+- 🔗 Múltiples fuentes de descarga por publicación (MediaFire, Mega, …).
+- 📱 Diseño responsive (móvil → escritorio) con animaciones y modo oscuro.
 
---[[
-  Name = "infinity yierd" <string> nome do seu botão
-  Callback = 
-function()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-  end
-]]
+## Nota sobre persistencia
+
+Esta versión funciona 100% en el navegador y guarda el contenido en
+`localStorage`, por lo que las publicaciones son locales a cada visitante. Para
+una biblioteca compartida entre todos los usuarios se necesitaría un backend
+(API + base de datos); el código está estructurado para añadirlo fácilmente.
